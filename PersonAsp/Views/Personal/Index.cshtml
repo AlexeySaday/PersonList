@@ -1,0 +1,33 @@
+﻿@page
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Список людей</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    @using PersonAsp
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Фамилия</th>
+                <th>Имя</th>
+                <th>Отчество</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var per in People.GetPersons())
+            {
+                <tr>
+                    <td><a class="flex-sm-fill text-sm-center nav link" asp-controller="Personal" asp-action="Index1" asp-route-id="@per.id">@per.id</a></td>
+                    <td><strong style="font-weight: lighter;">@per.Surname</strong></td>
+                    <td><strong style="font-weight: lighter;">@per.Name</strong></td>
+                    <td><strong style="font-weight: lighter;">@per.FatherName</strong></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

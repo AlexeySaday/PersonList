@@ -1,0 +1,40 @@
+﻿ 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Персональная информация</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+    <body>
+        @using PersonAsp
+        <div class="container">
+            <div class="row">
+                <div class="col"><strong>ID</strong></div>
+                <div class="col">@Model.id</div>
+            </div>
+            <div class="row">
+                <div class="col-md-6"><strong>Фамилия</strong></div>
+                <div class="col-md-6">@Model.Surname</div>
+            </div>
+            <div class="row">
+                <div class="col-md-6"><strong>Имя</strong> </div>
+                <div class="col-md-6">@Model.Name</div>
+            </div>
+            <div class="row">
+                <div class="col-md-6"><strong>Отчество</strong> </div>
+                <div class="col-md-6">@Model.FatherName</div>
+            </div>
+            <div class="row">
+                <div class="col-md-6"><strong>Номер телефона</strong> </div>
+                <div class="col-md-6">@Model.phoneNumber</div>
+            </div>
+            <div class="row">
+                <div class="col-md-6"><strong>Адрес</strong> </div>
+                <div class="col-md-6">@Model.address</div>
+            </div>
+            <div class="row">
+                <div class="col-md-6"><strong>Описание</strong> </div>
+                <div class="col-md-6">@Model.description</div>
+            </div>
+        </div>
+    </body>
+</html>
